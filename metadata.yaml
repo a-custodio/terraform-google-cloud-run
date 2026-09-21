@@ -24,7 +24,7 @@ spec:
     source:
       repo: https://github.com/GoogleCloudPlatform/terraform-google-cloud-run.git
       sourceType: git
-    version: 0.33.0
+    version: 0.34.0
     actuationTool:
       flavor: Terraform
       version: ">= 1.3"
@@ -323,13 +323,13 @@ spec:
     roles:
       - level: Project
         roles:
-          - roles/serviceusage.serviceUsageViewer
           - roles/cloudkms.admin
           - roles/resourcemanager.projectIamAdmin
           - roles/run.admin
           - roles/iam.serviceAccountAdmin
           - roles/artifactregistry.admin
           - roles/iam.serviceAccountUser
+          - roles/serviceusage.serviceUsageViewer
     services:
       - accesscontextmanager.googleapis.com
       - cloudbilling.googleapis.com
